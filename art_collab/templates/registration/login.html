@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block page_title %}
+  <title>ArtCollab | Login</title>
+{% endblock %}
+
+{% block main %}
+  <body class="">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h1 class="">
+            Sign in
+          </h1>
+          
+          {% block form %}
+            <form method="POST">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                <label>Email</label>
+                {{ form.username|attr:"class:form-control"|attr:"placeholder:Email" }}
+              </fieldset>
+          
+              <fieldset class="form-group">
+                <label>Password</label>
+                {{ form.password|attr:"class:form-control"|attr:"placeholder:Enter your password" }}
+              </fieldset>
+          
+              <button type="submit" class="btn">
+                Sign in
+              </button>
+          
+              <div class="">
+                <small class="">
+                  Don't have an account yet? <a href="">Register</a>
+                </small>
+              </div>
+            </form>
+          {% endblock %}
+
+        </div>
+      </div>
+    </div>
+{% endblock %}
