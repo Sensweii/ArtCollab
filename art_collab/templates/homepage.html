@@ -1,11 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block page_title %}
+  ArtCollab | Humanity'SPeak
+{% endblock %}
+
+{% block navigation %}
+  <nav>
+    <div class='nav-container'>
+      <div class='nav-items brand'>Brand Logo</div>
+      <div class='nav-items user-authentication'>
+        <a href='{% url "login" %}'>Sign-In</a>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
 {% block main %}
-    Home Page
-    <div id="root"></div>
+  <main>
+    <div class='centering-container'>
+      <div class='main-tab-container'>
+        <div class='main-tab'>Logos</div>
+        <div class='main-tab'>...</div>
+        <div class='main-tab'>...</div>
+      </div>
+      {% block context_data %}
+        {{ logos|json_script:'context-logos' }}
+      {% endblock %}
+      <div class='main-container' id="root"></div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    <div class='footer-container'>
+      <div class='footer-items'>&copy;2020 @ArtCollab</div>
+    </div>
+  </footer>
 {% endblock %}
 
 {% block js %}
-    <script src="{% static 'react-bundle.js' %}"></script>
+  <script src="{% static 'react-bundle.js' %}"></script>
 {% endblock %}

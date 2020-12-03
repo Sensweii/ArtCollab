@@ -1,20 +1,21 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="A fully featured web application for user profile customization." />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+    <meta name='description' content='A fully featured web application for user profile customization.' />
 
-    <link rel="icon" href="" />
-
-    {% block page_title %}
-    {% endblock %}
-
-</head>
-<body>
-
+    <link rel='stylesheet' href="{% static 'site-theme.css' %}" />
+    <link rel='icon' href='' />
+    
+    <title>
+      {% block page_title %}
+      {% endblock %}
+    </title>
+  </head>
+  <body>
     {% block modals %}
     {% endblock %}
 
@@ -22,6 +23,9 @@
     {% endblock %}
 
     {% block main %}
+    {% endblock %}
+
+    {% block footer %}
     {% endblock %}
 
     {% block js %}
