@@ -3,6 +3,7 @@ from django.db import models
 from core.models import TimeStampModel
 from users.models import User
 
+
 class Logo(TimeStampModel):
     """Model for logo objects."""
 
