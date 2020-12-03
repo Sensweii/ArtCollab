@@ -1,0 +1,146 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+}
+
+nav {
+  height: 5rem;
+  width: 95%;
+  border: 0.1rem dashed;
+  position: fixed;
+  left: 2.5%;
+  top: 0%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-items {
+  margin: auto 1rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  border: 0.1rem solid;
+  margin-top: 5.5rem;
+}
+
+.centering-container {
+  width: 95%;
+  align-items: center;
+  border: 0.3rem solid crimson;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  border: 0.2rem dashed red;
+  margin: 0.2rem;
+}
+
+.main-tab-container {
+  display: flex;
+  justify-content: left;
+  padding-left: 2.5rem;
+  border: 0.2rem dashed rgb(229, 255, 0);
+  margin: 0.2rem;
+}
+
+.main-tab {
+  color: blue;
+  text-decoration: underline;
+  border: 0.2rem solid blueviolet;
+  width: 5rem;
+}
+
+.app-container {
+  border: 0.2rem solid green;
+  width: 100%;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen-container {
+  border: 0.2rem dashed blue;
+  margin: 0.2rem;
+  width: 98%;
+}
+
+.sidebar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1rem solid;
+  width: 2%;
+}
+
+.sidebar-container.expand{
+  width: 10%;
+  justify-content: space-between;
+}
+
+.sidebar-button {
+  flex: initial;
+  height: 100%;
+  width: 28px;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: none;
+  height: 100%;
+  border: 0.1rem solid rgb(91, 165, 42);
+}
+
+.sidebar-content.show {
+  display: block
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 2.5rem;
+  width: 95%;
+  border: 0.1rem dashed;
+  position: fixed;
+  left: 2.5%;
+  bottom: 0%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
